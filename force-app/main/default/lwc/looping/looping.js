@@ -7,15 +7,7 @@
 **/
 import { LightningElement } from 'lwc';
 
-export default class HelloConditionalRendering extends LightningElement {
+export default class Looping extends LightningElement {
 
-    name
-  
-    ChangeHandler(event){
-        this.name = event.target.value
-    }
-
-    get helloMethod(){
-        return this.name === 'hello'
-    }
+    carList = ["ford", "audi", "Maruti", "Hyundai", "Tvs"]
 }
