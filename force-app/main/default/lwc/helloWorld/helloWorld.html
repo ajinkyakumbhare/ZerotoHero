@@ -2,9 +2,35 @@
   @description       : 
   @author            : PSL_Ajinkya Kumbhare-SFDX
   @group             : 
-  @last modified on  : 08-08-2023
+  @last modified on  : 08-09-2023
   @last modified by  : PSL_Ajinkya Kumbhare-SFDX
 -->
 <template>
-    <div>{fullname}</div>    
+    <!-- <div>{fullname}</div>  -->
+
+        <lightning-card  title="Two Wat Data Binding">
+        <div class="slds-var-m-around_medium">
+        <lightning-input type="text" 
+                         label="Enter some text" 
+                         onkeyup={changeHandler}></lightning-input>
+        <div> {fullname} is a Course of {title}</div>
+    </div>
+    </lightning-card> 
+
+    <lightning-card  title="@track properties">
+      <div class="slds-var-m-around_medium">
+      <lightning-input type="text" 
+                       label="Enter City Name" 
+                       onkeyup={trackHandler}></lightning-input>
+      <div> {address.city} is a name of city </div>
+  </div>
+  </lightning-card>
+
+
+  <lightning-card  title="Getter Demo">
+    <div class="slds-var-m-around_medium">
+    <div>User name is {firstUser}</div>
+    <div>value of multiply is {multipication}</div>
+</div>
+</lightning-card>
 </template>
